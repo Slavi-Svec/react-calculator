@@ -1,12 +1,11 @@
-import React from "react"
-import "./Button.css"
+import React from 'react'
+import './Button.css'
 
-const Button = ({ handleButtonPress, content, type  }) => {
-  console.log(type)
+const Button = ({ onClick, content, type  }) => {
   return (
     <button
       className={`Button ${type}`}
-      onClick={() => handleButtonPress}
+      onClick={() => onClick(content)}
     >
       {content}
     </button>
